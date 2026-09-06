@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZoneTech - نصنع حضورك الرقمي بشكل مختلف">
+<meta name="author" content="ZoneTech">
+<link rel="icon" type="image/png" href="<%= site.logo %>">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<title><%= site.title %></title>
+<!--Bootstrap-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css">
+<!--Stylesheets-->
+<link rel="stylesheet" type="text/css" href="css/style-rtl.css">
+<!--ZoneTech Redesign Styles-->
+<link rel="stylesheet" type="text/css" href="css/zonetech.css">
+<!--Responsive-->
+<link rel="stylesheet" type="text/css" href="css/responsive-rtl.css">
+<!--Animation-->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<!--Prettyphoto-->
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<!--Font-Awesome-->
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<!--Owl-Slider-->
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+<!--Preloader-->
+<div id="preloader">
+  <div class="css-spinner"></div>
+</div>
+<!--Navigation-->
+<header id="menu">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand" href="#menu">Zone<span>Tech</span></a> 
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a class="scroll" href="#menu">الرئيسية</a></li>
+            <li><a class="scroll" href="#about">من نحن</a></li>
+            <li><a class="scroll" href="#service">خدماتنا</a></li>
+            <li><a href="#portfolio">أعمالنا</a></li>
+            <li><a href="#features">كيف نعمل</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+            <li><a class="scroll" style="color: var(--color-interactive) !important; font-weight: 800;" href="#contact">ابدأ مشروعك</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Slider-Start-->
+<section id="slider">
+  <div id="home-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <% for(let i=0; i<slider.length; i++) { %>
+      <div class="item <%= i===0 ? 'active' : '' %>" style="background-image:url(<%= slider[i].bgImage %>)">
+        <div class="carousel-caption container">
+          <div class="row">
+            <div class="col-md-7 col-sm-12 col-xs-12">
+              <h1><%- slider[i].heading %></h1>
+              <h2><%- slider[i].subheading %></h2>
+              <p><%- slider[i].description %></p>
+              <div class="hero-buttons wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 30px; text-align: right;">
+                <a href="#service" class="btn-blg scroll">استكشف خدماتنا</a>
+                <a href="#contact" class="btn-blg btn-outline scroll">تحدث معنا عن مشروعك</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <a class="home-carousel-left" href="#home-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a> <a class="home-carousel-right" href="#home-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a> </div>
+  </div>
+</section>
+
+<!--About-Section-Start-->
+<section id="about">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading">
+        <h2><%- about.sectionTitle %></h2>
+        <div class="line"></div>
+        <p><%- about.sectionDescription %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 ab-sec">
+        <div class="col-md-6">
+          <h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms"><%- about.subheading %></h3>
+          <p><%- about.text %></p>
+        </div>
+        <div class="col-md-6 ab-sec-img wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"><img src="<%= about.image %>" alt=""> </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Service-Section-Start-->
+<section id="service">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading">
+        <h2><%- services.sectionTitle %></h2>
+        <div class="line"></div>
+        <p><%- services.sectionDescription %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="features-sec">
+        <% for(let i=0; i<services.items.length; i++) { %>
+        <div class="col-md-4 col-sm-6 col-xs-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="<%= i * 100 %>ms">
+          <div class="media service-box">
+            <div class="pull-left"> <i class="fa <%= services.items[i].icon %>"></i> </div>
+            <div class="media-body">
+              <h5 class="media-heading"><%= services.items[i].title %></h5>
+              <p><%= services.items[i].description %></p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Why Us Section-->
+<section id="whyus">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading">
+        <h2><%- why_us.sectionTitle %></h2>
+        <div class="line"></div>
+        <p><%- why_us.sectionDescription %></p>
+      </div>
+    </div>
+    <div class="row">
+      <% for(let i=0; i<why_us.items.length; i++) { %>
+        <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" style="margin-bottom: 30px;">
+          <div class="media service-box">
+            <div class="pull-left"> <i class="fa <%= why_us.items[i].icon %>" style="font-size: 30px; color: var(--color-interactive);"></i> </div>
+            <div class="media-body">
+              <h5 class="media-heading"><%= why_us.items[i].title %></h5>
+              <p><%= why_us.items[i].description %></p>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!--Features-Section-Start-->
+<section id="features">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading">
+        <h2><%- workflow.sectionTitle %></h2>
+        <div class="line"></div>
+        <p><%- workflow.sectionDescription %></p>
+      </div>
+    </div>
+    <ul class="nav nav-tabs" role="tablist">
+      <% for(let i=0; i<workflow.items.length; i++) { %>
+      <li role="presentation" class="<%= i===0 ? 'active' : '' %>"><a href="#tab-<%= i+1 %>" role="tab" data-toggle="tab"><i class="fa <%= workflow.items[i].icon %>"></i></a></li>
+      <% } %>
+    </ul>
+    <div class="tab-content">
+      <% for(let i=0; i<workflow.items.length; i++) { %>
+      <div role="tabpanel" class="tab-pane fade <%= i===0 ? 'in active ' : '' %>feat-sec" id="tab-<%= i+1 %>">
+        <div class="row">
+          <div class="col-md-6 tab">
+            <h5>المرحلة <%= i+1 %>: <%= workflow.items[i].title %></h5>
+            <div class="line"></div>
+            <div class="clearfix"></div>
+            <p class="feat-sec"><%- workflow.items[i].text %></p>
+          </div>
+          <div class="col-md-6 tab-img"><img src="<%= workflow.items[i].image %>" class="img-responsive" alt=""></div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!--Portfolio-Section-Start-->
+<section id="portfolio">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading">
+        <h2><%- portfolio.sectionTitle %></h2>
+        <div class="line"></div>
+        <p><%- portfolio.sectionDescription %></p>
+      </div>
+    </div>
+    <div class="text-center">
+      <ul class="portfolio-filter">
+        <% for(let i=0; i<portfolio.filters.length; i++) { %>
+        <li><a class="<%= i===0 ? 'active' : '' %>" href="#" data-filter="<%= portfolio.filters[i].filter %>"><%= portfolio.filters[i].name %></a></li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="portfolio-items">
+      <% for(let i=0; i<portfolio.items.length; i++) { %>
+      <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item <%= portfolio.items[i].filterClass %>">
+        <div class="portfolio-item-inner"> <img class="img-responsive" src="<%= portfolio.items[i].image %>" alt="">
+          <div class="portfolio-info"> <a class="preview" href="<%= portfolio.items[i].image %>" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+            <h6><%= portfolio.items[i].title %></h6>
+            <p><%= portfolio.items[i].category %></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- CTA before contact -->
+<div class="bg-sec">
+  <div class="container">
+    <div class="col-md-10 col-sm-10 col-xs-8">
+      <h3><%= cta.title %></h3>
+      <p><%= cta.description %></p>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-4"> <a class="btn-down scroll" href="<%= cta.buttonLink %>"><%= cta.buttonText %></a> </div>
+  </div>
+</div>
+
+<!--Contact-Section-Start-->
+<section id="contact">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="heading">
+        <h2><%- contact.sectionTitle %></h2>
+        <div class="line"></div>
+        <p><%- contact.sectionDescription %></p>
+      </div>
+    </div>
+    <div class="text-center">
+      <div class="col-md-6 col-sm-6 contact-sec-1">
+        <h4><%- contact.infoTitle %></h4>
+        <ul class="contact-form">
+          <li><i class="fa fa-map-marker"></i>
+            <h6><strong>العنوان:</strong> <%= contact.address %> </h6>
+          </li>
+          <li><i class="fa fa-envelope"></i>
+            <h6><strong>البريد:</strong> <a href="mailto:<%= contact.email %>"><%= contact.email %></a></h6>
+          </li>
+          <li><i class="fa fa-phone"></i>
+            <h6><strong>الهاتف:</strong> <%= contact.phone %> </h6>
+          </li>
+          <li><i class="fa fa-globe"></i>
+            <h6><strong>الموقع:</strong> <a href="#"><%= contact.website %></a> </h6>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <form id="main-contact-form" name="contact-form" method="post" action="#">
+          <div class="row  wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="الاسم الكامل" required="required">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="بريدك الإلكتروني" required="required">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="phone" class="form-control" placeholder="رقم الجوال">
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="اكتب لنا عن فكرتك أو احتياجك" required="required"></textarea>
+          </div>
+          <a class="btn-send col-md-12 col-sm-12 col-xs-12" href="#">إرسال طلب المشروع</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="bg-sec" style="background: transparent;">
+    <div class="container">
+      <h2><strong><%= footer.slogan %></strong></h2>
+    </div>
+  </div>
+</footer>
+<footer id="footer-down">
+  <h2>تابعنا على</h2>
+  <ul class="social-icon">
+    <% for(let i=0; i<footer.social.length; i++) { %>
+    <li class="hvr-pulse"><a href="<%= footer.social[i].link %>"><i class="fa <%= footer.social[i].icon %>"></i></a></li>
+    <% } %>
+  </ul>
+  <p> <%= footer.copyright %> </p>
+</footer>
+
+<!--Jquery-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--Boostrap-Jquery-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!--Preetyphoto-Jquery-->
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<!--NiceScroll-Jquery-->
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<!--Isotopes-->
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<!--Wow-Jquery-->
+<script type="text/javascript" src="js/wow.js"></script>
+<!--Count-Jquey-->
+<script type="text/javascript" src="js/jquery.countTo.js"></script>
+<script type="text/javascript" src="js/jquery.inview.min.js"></script>
+<!--Owl-Crousels-Jqury-->
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<!--Main-Scripts-->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

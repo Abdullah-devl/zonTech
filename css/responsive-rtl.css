@@ -1,0 +1,319 @@
+@media all and (min-width: 993px) and (max-width: 1200px) {
+#slider-video {
+    position: relative;
+	}
+.slider-wrap{
+position:relative;
+}
+.carousel-caption h2{
+font-size:67px;
+}
+.ab-sec-img img{
+width:100%;
+position:absolute;
+top:22px;
+}
+.team-desc ul.team-social-icon li {
+    padding-left: 10px;
+
+}
+.team-desc p{
+text-align:justify;
+}
+.mobilenav li {
+    padding: 6px;
+	}
+	.slide-sec-1 {
+    text-align: left;
+}
+.slide-sec-2 {
+    text-align: right;
+    padding: 0;
+}
+}
+@media all and (min-width: 767px) and (max-width: 992px) {
+#slider-video {
+    position: relative;
+	}
+.slider-wrap{
+position:relative;
+}
+.carousel-caption h2{
+font-size:67px;
+}
+#menu .nav {
+    right: 5%;
+    float: none;
+	top:5px;
+}
+.nav > li > a {
+    padding: 10px 10px;
+
+}
+.tab-img {
+    top: 0;
+	}
+.team-main-sec{
+margin-top:30px;
+}
+.blog-sec {
+margin-top:30px;
+}
+.hero-section {
+    padding: 18% 0% 0% 0%;
+}
+.hero-content h1{
+font-size:42px;
+}
+.slider-content h1 {
+    font-size: 40px;
+    line-height: 55px;
+}
+.mobilenav li {
+    padding: 6px;
+	}
+		.slide-sec-1 {
+    text-align: left;
+}
+.slide-sec-2 {
+    text-align: right;
+    padding: 0;
+}
+.parallex-content h1 {
+    font-size: 45px;
+	}
+.parallex-content {
+    top: 25%;
+}
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+#slider-video {
+    position: relative;
+	}
+.slider-wrap{
+position:relative;
+}
+.carousel-caption h2{
+font-size:45px;
+}
+.carousel-caption p {
+    font-size: 15px;
+    line-height: 25px;
+	}
+	.ab-sec-img img{
+width:100%;
+}
+a.btn-down {
+    top: 65px;
+	}
+	.navbar-nav > li > a {
+    padding-top: 0px;
+	}
+#menu .nav {
+ right:0%;
+ float:right;
+}
+.navbar-default .navbar-toggle {
+border:1px solid #999;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background:#999;
+}
+.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
+background:#FFFFFF;
+ transition:all 0.5s;
+ -moz-transition: all 0.5s;
+ -o-transition: all 0.5s;
+ -webkit-transition: all 0.5s;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background:var(--primary-color);
+ transition:all 0.5s;
+ -moz-transition: all 0.5s;
+ -o-transition: all 0.5s;
+ -webkit-transition: all 0.5s;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+ border:rgba(248, 248, 248, 0);
+ box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+}
+ul.navbar-nav {
+float:right;
+overflow:hidden;
+}
+.navbar-collapse {
+ background: rgba(15, 23, 42, 0.95); /* Dark solid background for mobile menu */
+ border-radius: 8px;
+ margin-top: 10px;
+ padding: 10px;
+}
+#features .nav-tabs > li > a {
+ width: auto;
+ padding: 0 15px;
+ font-size: 24px;
+}
+#pricing ul.pricing {
+ margin: 30px 0 15px;
+}
+ul.navbar-nav {
+ position: relative;
+ top:0;
+}
+.navbar-nav > li > a {
+    line-height: 17px;
+	}
+.navbar-collapse.in{
+overflow:hidden;
+}
+.tab-img {
+    top: 0;
+	}
+	.team-main-sec{
+margin-top:30px;
+}
+.blog-sec {
+margin-top:30px;
+}
+#footer-down ul li {
+    margin-left: 10px;
+}
+.hero-section {
+    padding: 18% 0% 0% 0%;
+}
+.hero-content h1{
+font-size:26px;
+}
+.hero-text{
+padding-bottom:5%;
+}
+a.btn-learn{
+top:10px;
+}
+.slider-content h1 {
+    font-size: 36px;
+    line-height: 55px;
+}
+.mobilenav li {
+    padding: 6px;
+	}
+		.slide-sec-1 {
+    text-align: left;
+}
+.slide-sec-2 {
+    text-align: right;
+    padding: 0;
+}
+.parallex-content h1 {
+    font-size: 32px;
+	}
+.parallex-content {
+    top: 20%;
+}
+}
+@media all and (min-width: 299px) and (max-width: 479px) {
+#slider-video {
+    position: relative;
+	}
+	.slider-wrap{
+position:relative;
+}
+.carousel-caption h2{
+font-size:45px;
+}
+.carousel-caption p {
+    font-size: 15px;
+    line-height: 25px;
+	}
+	.ab-sec-img img{
+width:100%;
+}
+a.btn-down {
+    top: 65px;
+	}
+#menu .nav {
+ right:0%;
+ float:right;
+}
+.navbar-default .navbar-toggle {
+border:1px solid #999;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background:#999;
+}
+.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
+background:#FFFFFF;
+ transition:all 0.5s;
+ -moz-transition: all 0.5s;
+ -o-transition: all 0.5s;
+ -webkit-transition: all 0.5s;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background:var(--primary-color);
+ transition:all 0.5s;
+ -moz-transition: all 0.5s;
+ -o-transition: all 0.5s;
+ -webkit-transition: all 0.5s;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+ border:rgba(248, 248, 248, 0);
+ box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+}
+ul.navbar-nav {
+float:right;
+overflow:hidden;
+}
+.navbar-collapse {
+ background: rgba(15, 23, 42, 0.95);
+ border-radius: 8px;
+ margin-top: 10px;
+ padding: 10px;
+}
+#features .nav-tabs > li > a {
+ width: auto;
+ padding: 0 10px;
+ font-size: 20px;
+}
+#pricing ul.pricing {
+ margin: 30px 0 15px;
+}
+ul.navbar-nav {
+ position: relative;
+ top:0;
+}
+.navbar-nav > li > a {
+    line-height: 17px;
+	}
+.navbar-collapse.in{
+overflow:hidden;
+}
+.tab-img {
+    top: 0;
+	}
+	.team-main-sec{
+margin-top:30px;
+}
+.slider-content h1 {
+    font-size: 36px;
+    line-height: 55px;
+}
+.slider-content h2 {
+    font-size: 21px;
+    padding: 10px 0px 10px 0px;
+}
+.blog-sec {
+margin-top:30px;
+}
+.mobilenav li {
+    padding: 6px;
+	}
+.slide-sec-1 {
+    text-align: left;
+}
+.slide-sec-2 {
+    text-align: right;
+    padding: 0;
+}
+#footer-down ul li {
+    margin-left: 10px;
+}
+}
