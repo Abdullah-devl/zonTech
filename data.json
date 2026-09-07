@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "ZoneTech - نصنع حضورك الرقمي بشكل مختلف",
-    "logo": "images/Logo/01.png"
+    "logo": "images/Logo/logo2.png"
   },
   "slider": [
     {
@@ -185,17 +185,16 @@
     "sectionDescription": "أرسل لنا تفاصيل مختصرة عن مشروعك، وسنتواصل معك لمناقشة الاحتياج والخطوات المناسبة.",
     "infoTitle": "معلومات <span>التواصل</span>",
     "address": "نعمل عن بُعد لخدمة العملاء في مختلف المناطق.",
-    "email": "info@zonetech.com",
-    "phone": "+966 50 000 0000",
-    "website": "www.zonetech.com"
+    "email": "zzoonne.02@gmail.com",
+    "phone": "00967774668633",
+    "website": "https://zontech.pages.dev/"
   },
   "footer": {
     "slogan": "ZoneTech — نصمم تجارب رقمية تساعد العلامات التجارية على الظهور، النمو، والتقدم.",
     "copyright": "© 2026 ZoneTech. جميع الحقوق محفوظة.",
     "social": [
-      { "name": "واتساب", "icon": "fa-whatsapp", "link": "#" },
-      { "name": "إنستغرام", "icon": "fa-instagram", "link": "#" },
-      { "name": "لينكدإن", "icon": "fa-linkedin", "link": "#" }
+      { "name": "واتساب", "icon": "fa-whatsapp", "link": "https://wa.me/00967780371289" },
+      { "name": "إنستغرام", "icon": "fa-instagram", "link": "https://instagram.com/zonetech.dev" }
     ]
   }
 }
