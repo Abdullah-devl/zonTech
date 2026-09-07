@@ -152,7 +152,21 @@ p {
     color: var(--text-secondary);
     line-height: 1.8;
     max-width: 90%;
+}
 
+/* Slide column positioning for left-aligned slides (Slide 2) */
+@media (min-width: 768px) {
+    .slide-left-col {
+        margin-right: 41.666667% !important;
+        float: right !important;
+    }
+}
+@media (max-width: 767px) {
+    .slide-left-col {
+        margin-right: 0 !important;
+        float: none !important;
+        width: 100% !important;
+    }
 }
 
 /* Services & Common Cards */

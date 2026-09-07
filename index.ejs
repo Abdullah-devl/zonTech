@@ -70,7 +70,7 @@
       <div class="item <%= i===0 ? 'active' : '' %>" style="background-image:url(<%= slider[i].bgImage %>)">
         <div class="carousel-caption container">
           <div class="row">
-            <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="col-md-7 <%= (slider[i].position === 'left' || i === 1) ? 'col-md-offset-5 col-sm-offset-5 slide-left-col' : '' %> col-sm-12 col-xs-12">
               <h1><%- slider[i].heading %></h1>
               <h2><%- slider[i].subheading %></h2>
               <p><%- slider[i].description %></p>
