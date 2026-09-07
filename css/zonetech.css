@@ -545,6 +545,70 @@ ul.pricing li {
     color: rgba(169, 194, 203, 0.6) !important;
 }
 
+/* WhatsApp Submit Button & Feedback */
+.btn-form-whatsapp {
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    padding: 16px 25px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.btn-form-whatsapp:hover {
+    background: linear-gradient(135deg, #28e06c 0%, #159b8b 100%) !important;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5) !important;
+    transform: translateY(-2px);
+    color: #ffffff !important;
+}
+
+.btn-form-whatsapp:active {
+    transform: scale(0.98);
+}
+
+.btn-form-whatsapp i.fa-whatsapp {
+    font-size: 24px !important;
+    line-height: 1 !important;
+}
+
+.form-whatsapp-note {
+    text-align: center !important;
+    margin-top: 10px !important;
+    font-size: 1.3rem !important;
+    color: var(--text-secondary) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+.form-whatsapp-note i {
+    color: #25D366 !important;
+}
+
+#form-status {
+    display: none;
+    margin-top: 15px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+
 /* Contact details formatting */
 .contact-form ul {
     padding: 0 !important;

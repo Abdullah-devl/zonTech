@@ -272,19 +272,16 @@
         </ul>
       </div>
       <div class="col-md-6 col-sm-6">
-        <form id="main-contact-form" name="contact-form" method="post" action="https://formsubmit.co/zzoonne.0@gmail.com">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://zontech.pages.dev/">
-          <input type="hidden" name="_subject" value="رسالة جديدة من موقع ZoneTech">
+        <form id="main-contact-form" name="contact-form" onsubmit="return false;">
           <div class="row  wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="col-sm-6">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="الاسم الكامل" required="required">
+                <input type="text" name="name" class="form-control" placeholder="الاسم الكامل *" required="required">
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="بريدك الإلكتروني" required="required">
+                <input type="email" name="email" class="form-control" placeholder="بريدك الإلكتروني (اختياري)">
               </div>
             </div>
           </div>
@@ -292,17 +289,15 @@
             <input type="text" name="phone" class="form-control" placeholder="رقم الجوال">
           </div>
           <div class="form-group">
-            <textarea name="message" id="message" class="form-control" rows="4" placeholder="اكتب لنا عن فكرتك أو احتياجك" required="required"></textarea>
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="اكتب لنا عن فكرتك أو احتياجك *" required="required"></textarea>
           </div>
-          <div class="form-buttons-group">
-            <button type="button" id="send-whatsapp-btn" class="btn-form-whatsapp">
-              <i class="fa fa-whatsapp" style="font-size: 18px;"></i> إرسال عبر واتساب
-            </button>
-            <button type="submit" id="send-email-btn" class="btn-form-email">
-              <i class="fa fa-envelope" style="font-size: 16px;"></i> إرسال عبر الإيميل
-            </button>
+          <button type="submit" id="send-whatsapp-btn" class="btn-form-whatsapp">
+            <i class="fa fa-whatsapp"></i> إرسال طلب المشروع عبر واتساب
+          </button>
+          <div class="form-whatsapp-note">
+            <i class="fa fa-bolt"></i> تواصل فوري ومباشر مع فريق ZoneTech عبر واتساب
           </div>
-          <div id="form-status" style="display:none; margin-top: 15px; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 14px;"></div>
+          <div id="form-status"></div>
         </form>
       </div>
     </div>
@@ -344,99 +339,73 @@ $(document).ready(function() {
   var form = $('#main-contact-form');
   if (!form.length) return;
 
-  // WhatsApp Button Click
-  $('#send-whatsapp-btn').on('click', function(e) {
-    e.preventDefault();
-    var name = form.find('input[name="name"]').val().trim();
-    var email = form.find('input[name="email"]').val().trim();
-    var phone = form.find('input[name="phone"]').val().trim();
-    var message = form.find('textarea[name="message"]').val().trim();
+  function submitToWhatsApp() {
+    var nameInput = form.find('input[name="name"]');
+    var emailInput = form.find('input[name="email"]');
+    var phoneInput = form.find('input[name="phone"]');
+    var messageInput = form.find('textarea[name="message"]');
+    var statusDiv = $('#form-status');
 
-    if (!name || !message) {
-      alert('يرجى كتابة اسمك وتفاصيل فكرتك أو احتياجك للمتابعة عبر واتساب.');
-      if (!name) form.find('input[name="name"]').focus();
-      else form.find('textarea[name="message"]').focus();
+    var name = nameInput.val().trim();
+    var email = emailInput.val().trim();
+    var phone = phoneInput.val().trim();
+    var message = messageInput.val().trim();
+
+    if (!name) {
+      statusDiv.css({
+        'background': 'rgba(239, 68, 68, 0.15)',
+        'color': '#ef4444',
+        'border': '1px solid #ef4444'
+      })
+      .html('<i class="fa fa-exclamation-circle"></i> يرجى إدخال الاسم الكامل للمتابعة.')
+      .stop(true, true).slideDown();
+      nameInput.focus();
       return;
     }
 
-    var text = 'مرحباً ZoneTech 👋\nطلب مشروع جديد من الموقع:\n\n' +
-               '👤 الاسم: ' + name + '\n';
-    if (phone) text += '📱 رقم الجوال: ' + phone + '\n';
-    if (email) text += '✉️ البريد الإلكتروني: ' + email + '\n';
-    text += '\n📝 تفاصيل الفكرة / المشروع:\n' + message;
+    if (!message) {
+      statusDiv.css({
+        'background': 'rgba(239, 68, 68, 0.15)',
+        'color': '#ef4444',
+        'border': '1px solid #ef4444'
+      })
+      .html('<i class="fa fa-exclamation-circle"></i> يرجى كتابة تفاصيل فكرتك أو احتياجك للمشروع.')
+      .stop(true, true).slideDown();
+      messageInput.focus();
+      return;
+    }
+
+    // Success notification
+    statusDiv.css({
+      'background': 'rgba(37, 211, 102, 0.15)',
+      'color': '#25D366',
+      'border': '1px solid #25D366'
+    })
+    .html('<i class="fa fa-check-circle"></i> جاري توجيهك إلى واتساب لإرسال تفاصيل مشروعك مباشرة...')
+    .stop(true, true).slideDown();
+
+    var text = 'مرحباً ZoneTech 👋\n' +
+               'طلب مشروع جديد من الموقع:\n\n' +
+               '👤 *الاسم:* ' + name + '\n';
+    if (phone) text += '📱 *رقم الجوال:* ' + phone + '\n';
+    if (email) text += '✉️ *البريد:* ' + email + '\n';
+    text += '\n📝 *تفاصيل الفكرة / المشروع:*\n' + message;
 
     var waUrl = 'https://wa.me/967780371289?text=' + encodeURIComponent(text);
-    window.open(waUrl, '_blank');
-  });
+    
+    setTimeout(function() {
+      window.open(waUrl, '_blank');
+    }, 400);
+  }
 
-  // Email Form Submit (AJAX with mailto fallback)
   form.on('submit', function(e) {
     e.preventDefault();
-    var submitBtn = $('#send-email-btn');
-    var originalText = submitBtn.html();
-    var statusDiv = $('#form-status');
+    submitToWhatsApp();
+  });
 
-    submitBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> جاري الإرسال...');
-    statusDiv.hide();
-
-    var name = form.find('input[name="name"]').val().trim();
-    var email = form.find('input[name="email"]').val().trim();
-    var phone = form.find('input[name="phone"]').val().trim();
-    var message = form.find('textarea[name="message"]').val().trim();
-
-    var payload = {
-      name: name,
-      email: email,
-      phone: phone,
-      message: message,
-      _subject: 'طلب مشروع جديد من موقع ZoneTech'
-    };
-
-    fetch('https://formsubmit.co/ajax/zzoonne.0@gmail.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    })
-    .then(function(res) { return res.json(); })
-    .then(function(data) {
-      submitBtn.prop('disabled', false).html(originalText);
-      if (data.success === 'true' || data.success === true) {
-        statusDiv.css({
-          'background': 'rgba(16, 185, 129, 0.15)',
-          'color': '#10B981',
-          'border': '1px solid #10B981'
-        })
-        .html('<i class="fa fa-check-circle"></i> تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.')
-        .fadeIn();
-        form[0].reset();
-      } else {
-        // Direct email fallback
-        statusDiv.css({
-          'background': 'rgba(53, 196, 213, 0.15)',
-          'color': '#35C4D5',
-          'border': '1px solid #35C4D5'
-        })
-        .html('جاري فتح تطبيق البريد لإرسال رسالتك إلى zzoonne.0@gmail.com...')
-        .fadeIn();
-        var mailBody = 'الاسم: ' + name + '\nالجوال: ' + phone + '\nالبريد: ' + email + '\n\n' + message;
-        window.location.href = 'mailto:zzoonne.0@gmail.com?subject=' + encodeURIComponent(payload._subject) + '&body=' + encodeURIComponent(mailBody);
-      }
-    })
-    .catch(function(err) {
-      submitBtn.prop('disabled', false).html(originalText);
-      statusDiv.css({
-        'background': 'rgba(53, 196, 213, 0.15)',
-        'color': '#35C4D5',
-        'border': '1px solid #35C4D5'
-      })
-      .html('جاري فتح تطبيق البريد لإرسال رسالتك إلى zzoonne.0@gmail.com...')
-      .fadeIn();
-      var mailBody = 'الاسم: ' + name + '\nالجوال: ' + phone + '\nالبريد: ' + email + '\n\n' + message;
-      window.location.href = 'mailto:zzoonne.0@gmail.com?subject=' + encodeURIComponent(payload._subject) + '&body=' + encodeURIComponent(mailBody);
-    });
+  $('#send-whatsapp-btn').on('click', function(e) {
+    e.preventDefault();
+    submitToWhatsApp();
   });
 });
 </script>
