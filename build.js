@@ -33,7 +33,17 @@ try {
       fs.cpSync(src, dest, { recursive: true });
     }
   }
-  console.log('Successfully copied assets to dist/');
+
+  // Copy root SEO files
+  const rootFiles = ['robots.txt', 'sitemap.xml'];
+  for (const file of rootFiles) {
+    const src = path.join(__dirname, file);
+    const dest = path.join(outputDir, file);
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, dest);
+    }
+  }
+  console.log('Successfully copied assets and SEO files to dist/');
 } catch (err) {
   console.error('Error generating HTML:', err);
 }

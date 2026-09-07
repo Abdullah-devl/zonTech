@@ -3,11 +3,147 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ZoneTech - نصنع حضورك الرقمي بشكل مختلف">
-<meta name="author" content="ZoneTech">
-<link rel="icon" type="image/png" href="<%= site.logo %>">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <title><%= site.title %></title>
+<meta name="description" content="<%- site.description %>">
+<meta name="keywords" content="<%- site.keywords %>">
+<meta name="author" content="ZoneTech">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://zontech.pages.dev/">
+
+<!-- Mobile & PWA Theme Meta -->
+<meta name="theme-color" content="#08283d">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ZoneTech">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:url" content="https://zontech.pages.dev/">
+<meta property="og:title" content="ZoneTech | نصنع حضورك الرقمي بشكل مختلف">
+<meta property="og:description" content="استوديو تقني متخصص في تصميم وتطوير المواقع، المتاجر الإلكترونية، تطبيقات الجوال، والحلول الرقمية المبتكرة.">
+<meta property="og:image" content="https://zontech.pages.dev/images/Slider/02.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="ZoneTech Digital Solutions">
+<meta property="og:site_name" content="ZoneTech">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://zontech.pages.dev/">
+<meta name="twitter:title" content="ZoneTech | نصنع حضورك الرقمي بشكل مختلف">
+<meta name="twitter:description" content="استوديو تقني متكامل لتصميم وتطوير المواقع والمتاجر وتطبيقات الجوال.">
+<meta name="twitter:image" content="https://zontech.pages.dev/images/Slider/02.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="<%= site.logo %>">
+<link rel="apple-touch-icon" href="<%= site.logo %>">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://zontech.pages.dev/#organization",
+      "name": "ZoneTech",
+      "alternateName": ["زون تك", "ZoneTech Studio"],
+      "url": "https://zontech.pages.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zontech.pages.dev/images/Logo/logo1.png",
+        "caption": "ZoneTech Logo"
+      },
+      "description": "استوديو تقني متخصص في تصميم وتطوير المواقع والمتاجر وتطبيقات الجوال والحلول الرقمية المبتكرة.",
+      "email": "zzoonne.0@gmail.com",
+      "telephone": "+967780371289",
+      "sameAs": [
+        "https://instagram.com/zonetech.dev",
+        "https://wa.me/967780371289"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+967780371289",
+          "contactType": "sales",
+          "availableLanguage": ["Arabic", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+967774668633",
+          "contactType": "technical support",
+          "availableLanguage": ["Arabic", "English"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zontech.pages.dev/#website",
+      "url": "https://zontech.pages.dev/",
+      "name": "ZoneTech",
+      "description": "نصنع حضورك الرقمي بشكل مختلف",
+      "publisher": {
+        "@id": "https://zontech.pages.dev/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://zontech.pages.dev/#service",
+      "name": "ZoneTech Digital Solutions",
+      "url": "https://zontech.pages.dev/",
+      "image": "https://zontech.pages.dev/images/Slider/02.jpg",
+      "telephone": "+967780371289",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "YE"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "خدمات ZoneTech",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "تصميم وتطوير المواقع الإلكترونية"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "تطوير تطبيقات الجوال الذكية"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "تصميم واجهات وتجربة المستخدم UX/UI"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "إنشاء وتطوير المتاجر الإلكترونية"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
 <!--Bootstrap-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css">
 <!--Stylesheets-->
@@ -44,7 +180,7 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           <a class="navbar-brand" href="#menu" style="padding: 5px 15px;">
-            <img src="images/Logo/logo1.png" alt="ZoneTech" style="height: 40px;">
+            <img src="images/Logo/logo1.png" alt="ZoneTech - استوديو الحلول الرقمية وتطوير المواقع والتطبيقات" style="height: 40px;">
           </a> 
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -103,7 +239,7 @@
           <h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms"><%- about.subheading %></h3>
           <p><%- about.text %></p>
         </div>
-        <div class="col-md-6 ab-sec-img wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"><img src="<%= about.image %>" alt=""> </div>
+        <div class="col-md-6 ab-sec-img wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"><img src="<%= about.image %>" alt="فريق ZoneTech لتصميم وتطوير التجارب الرقمية"> </div>
       </div>
     </div>
   </div>
@@ -188,7 +324,7 @@
             <div class="clearfix"></div>
             <p class="feat-sec"><%- workflow.items[i].text %></p>
           </div>
-          <div class="col-md-6 tab-img"><img src="<%= workflow.items[i].image %>" class="img-responsive" alt=""></div>
+          <div class="col-md-6 tab-img"><img src="<%= workflow.items[i].image %>" class="img-responsive" alt="<%= workflow.items[i].title %> - مرحلة عمل ZoneTech"></div>
         </div>
       </div>
       <% } %>
@@ -216,7 +352,7 @@
     <div class="portfolio-items">
       <% for(let i=0; i<portfolio.items.length; i++) { %>
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item <%= portfolio.items[i].filterClass %>">
-        <div class="portfolio-item-inner"> <img class="img-responsive" src="<%= portfolio.items[i].image %>" alt="">
+        <div class="portfolio-item-inner"> <img class="img-responsive" src="<%= portfolio.items[i].image %>" alt="<%= portfolio.items[i].title %> - أعمال ZoneTech">
           <div class="portfolio-info"> <a class="preview" href="<%= portfolio.items[i].image %>" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6><%= portfolio.items[i].title %></h6>
             <p><%= portfolio.items[i].category %></p>
