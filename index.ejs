@@ -231,11 +231,15 @@
 <!-- CTA before contact -->
 <div class="bg-sec">
   <div class="container">
-    <div class="col-md-10 col-sm-10 col-xs-8">
-      <h3><%= cta.title %></h3>
-      <p><%= cta.description %></p>
+    <div class="row cta-row">
+      <div class="col-md-9 col-sm-8 col-xs-12 cta-text">
+        <h3><%= cta.title %></h3>
+        <p><%= cta.description %></p>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12 cta-btn">
+        <a class="btn-down scroll" href="<%= cta.buttonLink %>"><%= cta.buttonText %></a>
+      </div>
     </div>
-    <div class="col-md-2 col-sm-2 col-xs-4"> <a class="btn-down scroll" href="<%= cta.buttonLink %>"><%= cta.buttonText %></a> </div>
   </div>
 </div>
 
