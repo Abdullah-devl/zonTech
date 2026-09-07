@@ -261,7 +261,67 @@ ul.pricing li {
     box-shadow: var(--shadow-glow) !important;
 }
 
-/* Contact Form Submit Button */
+/* Contact Form Action Buttons (WhatsApp + Email) */
+.form-buttons-group {
+    display: flex;
+    gap: 14px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-form-whatsapp {
+    flex: 1;
+    min-width: 180px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    padding: 13px 18px !important;
+    border-radius: 10px !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.btn-form-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6) !important;
+    color: #ffffff !important;
+}
+
+.btn-form-email {
+    flex: 1;
+    min-width: 180px;
+    background: var(--gradient-btn) !important;
+    color: var(--bg-main) !important;
+    font-weight: 800 !important;
+    font-size: 1.4rem !important;
+    padding: 13px 18px !important;
+    border-radius: 10px !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-shadow: var(--shadow-glow) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.btn-form-email:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(141, 231, 242, 0.8) !important;
+    color: var(--bg-main) !important;
+}
+
+/* Contact Form Submit Button Fallback */
 .btn-send, button.btn-send, a.btn-send {
     background: var(--gradient-btn) !important;
     color: var(--bg-main) !important;
